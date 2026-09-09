@@ -30,8 +30,11 @@ CREATE TABLE ticket (
     community_member_id INT NOT NULL,
     ward INT NOT NULL,
     muncipal_service VARCHAR(250) NOT NULL,
+    incident_description VARCHAR(250) NOT NULL,
+    incident_address VARCHAR(250) NOT NULL,
     date_filed DATETIME NOT NULL,
-    CONSTRAINT fk_com_member_id FOREIGN KEY (community_member_id) REFERENCES community_member(community_member_id)
+    picture VARCHAR(100),
+    CONSTRAINT fk_community_member_id FOREIGN KEY (community_member_id) REFERENCES community_members()
 );
 
 CREATE TABLE ticket_comment(

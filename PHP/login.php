@@ -2,11 +2,11 @@
 
 session_start();
 
-require 'dbconnection.php'; //copies all the code from the file to this section
+require '../DB/dbConnect.php'; //copies all the code from the file to this section
 
 //check request method for security
 if($_SERVER['REQUEST_METHOD'] !=='POST') {
-    die('Invalid request method')
+    die('Invalid request method');
 }
 
 //Check if both fields exist

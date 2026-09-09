@@ -4,12 +4,17 @@
    <meta charset="UTF-8">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <title>Track Incidents</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../CSS/style.css">
 </head>
  
 <body>
+
+<?php 
+   require '../DB/dbConnect.php';
+   include '../PHP/navbar.php';
+?>
+
    
-   <nav><a href="navbar.html">Nav Bar</a></nav>  
-   
+<?php include '../PHP/footer.php';?>
 </body>
 </html>

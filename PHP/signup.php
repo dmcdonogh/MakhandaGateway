@@ -1,27 +1,36 @@
 <?php
 
-include "dbconnection.php";
+include "../DB/dbConnect.php";
 if($_SERVER["REQUEST_METHOD"] == "POST")
     {
         $firstname = isset($_POST["firstname"]) ? trim($_POST["firstname"]): '';
         $surname = isset($_POST["surname"]) ? trim($_POST["surname"]): '';
         $userrole = isset($_POST["userrole"]) ? trim($_POST["userrole"]): '';
-
-        //only if community member or ward councillor are selected, they can choose a ward
-        if ($userrole == "Ward Councillor" || "Community Member")
-        {
-            $ward = isset($POST["ward"]) ? trim($_POST["ward"]): ''
-        }
-
-        $phone = isset($_POST["phone"]) ? trim($_POST["phone"]): '';
+        $ward = isset($_POST["ward"]) ? trim($_POST["ward"]) : '';
         $email = isset($_POST["email"]) ? trim(htmlspecialchars($_POST["email"])): '';
         $pword = isset($_POST["pword"]) ? $_POST["pword"] : '';
         $hash_pword = !empty($pword) ? password_hash($pword, PASSWORD_DEFAULT): '';
         
-        $stmt = $conn->prepare("INSERT INTO User(fname, lname, role, ward, phone, email, password)
-                                VALUES(?,?,?,?,?,?,?,?,?,?)");
+        if ($userrole === "Community Member")
+        {
+            $account_status = "active";
+        } 
+        else
+        {
+            $account_status = "pending";
+        }
+
+        //check if the user has a deactive account and reactivate with new password and info
+
+        $stmt = $conn->prepare("INSERT INTO users(first_name, last_name, role, ward, email, password, status)
+                                VALUES(?,?,?,?,?,?,?)");
         
-        $stmt -> bind_param("isssssssss", $firstname, $surname, $userrole, $ward, $phone, $email, $hash_pword);
+        if ($stmt === false)
+        {
+            die("Prepare failed: " . $conn->error);
+        }
+
+        $stmt -> bind_param("sssisss", $firstname, $surname, $userrole, $ward, $email, $hash_pword, $account_status);
 
         if($stmt->execute())
             {

@@ -5,13 +5,17 @@
         <meta name = "viewport" content = "wdth+device-width, initial-scale = 1.0">
 
         <title>Login Form</title>
-        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="../CSS/signin.css">
+        <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
     </head>
     <body>
-        <?php include '../PHP/navbar.php';?>
+<?php 
+   require '../DB/dbConnect.php';
+   include '../PHP/navbar.php';
+?>
 
         <h2> LOGIN FORM </h2>
-        <form action = "login.php" method = "POST" autocomplete = "off">
+        <form action = "../PHP/login.php" method = "POST" autocomplete = "off">
 
             <label>USER NAME: <input type = "text" name = "username" maxlength = "35" size = "20" placeholder = "enter username" required></label>
             <br><br>

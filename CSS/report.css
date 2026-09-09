@@ -1,0 +1,106 @@
+body{
+
+   background-color: #d3d3d3;
+   font-family: 'Times New Roman';
+}
+h2{
+   font-family: 'Times New Roman';
+   color:#516BB5;
+}
+h4{
+   font-family: 'Times New Roman';
+   color:#516BB5;
+}
+.logo-image{
+   border: 1px solid #ddd;
+   border-radius: 4px;
+   padding: 5px;
+   width: 150px;
+}
+
+.about-profile-img{
+   border: 1px solid #ddd;
+   border-radius: 4px;
+   padding: 5px;
+   width: 150px;
+}
+ p{ font-family: 'Times New Roman';
+    text-align: justify;
+    padding:10px;
+ }
+ .navbar{
+    display: flex;
+    flex-direction: row;
+    align-items:center;
+    gap: 1rem;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+
+}
+.navbar-profilelinks {
+   margin-left: auto;
+}
+
+a:link, a:visited{
+   color: black;
+   text-decoration: none;
+}
+a:hover, a:active{
+   color:#516BB5;
+}
+fieldset {
+  background-color: white;
+}
+
+.report-button{ /*most buttons*/
+   display:flex;
+   text-align: center;
+   font-family: 'Times New Roman';
+   background-color: #7ecdfc;
+   border: 1px solid black;
+   border-radius: 4px;
+   padding: 10px 20px;
+   margin: 8px 0;
+   text-decoration: none;
+   font-size: 16px;
+   cursor: pointer;
+  /* Set a baseline width and height */
+   min-width: 200px; 
+   height: 45px;
+  text-align: center;
+ }
+
+ #report-button-clear{
+   background-color: #DAE8FC;
+ }
+
+legend {
+  background-color: white;
+  padding: 5px 10px;
+  display: block;
+  padding-left: 2px;
+  padding-right: 2px;
+  border-radius:50px;
+}
+
+#INCIDENT-table{
+   font-family: 'Times New Roman';
+   color:#516BB5;
+   border-collapse: separate;
+   background-color: lightblue;
+   border: 1px solid blue;
+   padding-top: 8px;
+   padding-bottom: 8px;
+   border-spacing: 15px 50px;
+}
+th{
+
+}
+td{
+font-family: 'Times New Roman';
+   color:#516BB5;
+}
+
+
+/*add color for the input details*/
