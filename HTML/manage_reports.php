@@ -13,3 +13,6 @@
    require '../DB/dbConnect.php';
    include '../PHP/navbar.php';
 ?>
+
+    
+</body>

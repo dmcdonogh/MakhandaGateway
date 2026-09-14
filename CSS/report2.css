@@ -1,0 +1,256 @@
+/* report.css */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Times new roman';
+    background-color:#d3d3d3;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+
+/* Page heading */
+body > h1 {
+    color: #516bb5;
+    font-size: 1.8rem;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    margin: 30px 0 10px;
+    text-shadow: 0 2px 6px rgba(0, 0, 0, 0.25);
+    text-align: center;
+}
+
+/* Form container */
+form {
+    width: 100%;
+    max-width: 600px;
+    margin: 20px auto 40px;
+    background: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    padding: 30px;
+}
+
+/* Fieldset reset */
+fieldset {
+    border: none;
+    padding: 0;
+    margin: 0;
+}
+
+legend {
+    display: none;
+}
+
+/* Table styling */
+.table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.table th {
+    padding-bottom: 20px;
+    text-align: center;
+}
+
+.table th h2 {
+    font-size: 1.4rem;
+    color: #333;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    border-bottom: 3px solid #667eea;
+    display: inline-block;
+    padding-bottom: 10px;
+}
+
+.table td {
+    padding: 10px 8px;
+    font-size: 0.95rem;
+    color: #444;
+    letter-spacing: 0.5px;
+}
+
+/* Sub-headings inside the form */
+.table td h4,
+.table td h5 {
+    color:#516bb5;
+    font-size: 0.95rem;
+    text-transform: uppercase;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    margin-bottom: 6px;
+}
+/* Asterisk icon spacing */
+.table td h4 i,
+.table td h5 i {
+    margin-left: 4px;
+}
+
+/* Input fields */
+.table input[type="text"],
+.table input[type="date"],
+.table input[type="file"],
+.table select,
+.table textarea {
+    width: 100%;
+    padding: 10px 12px;
+    border: 2px solid #e0e0e0;
+    border-radius: 6px;
+    font-size: 0.95rem;
+    font-family: inherit;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    outline: none;
+    background-color: #fafafa;
+    color: #333;
+}
+
+.table textarea {
+    resize: vertical;
+    min-height: 44px;
+    line-height: 1.4;
+}
+
+/* Focus states */
+.table input[type="text"]:focus,
+.table input[type="date"]:focus,
+.table input[type="file"]:focus,
+.table select:focus,
+.table textarea:focus {
+    border-color: #667eea;
+    box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.15);
+    background-color: #fff;
+}
+
+/* Dropdown styling */
+.form-select,
+#ward {
+    cursor: pointer;
+}
+
+/* File input styling */
+.table input[type="file"] {
+    padding: 8px;
+    cursor: pointer;
+}
+
+.table input[type="file"]::file-selector-button {
+    padding: 8px 16px;
+    margin-right: 12px;
+    border: none;
+    border-radius: 6px;
+    background:#7ecdfc;
+    color: #ffffff;
+    font-weight: 600;
+    font-size: 0.85rem;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.table input[type="file"]::file-selector-button:hover {
+    background-color:#dae8fc;
+    transform: translateY(-1px);
+}
+
+/* Buttons */
+.report-button {
+    width: 100%;
+    padding: 12px 28px;
+    border: none;
+    border-radius: 6px;
+    font-size: 0.95rem;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+    text-transform: uppercase;
+    background-color:#7ecdfc;
+    color: #ffffff;
+    box-shadow: 0 4px 12px rgba(102, 126, 234, 0.4);
+    margin-top: 6px;
+}
+
+.report-button:hover {
+    background-color:#7ecdfc;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 18px rgba(102, 126, 234, 0.5);
+}
+
+.report-button:active {
+    transform: translateY(0);
+    box-shadow: 0 2px 8px rgba(102, 126, 234, 0.4);
+}
+
+/* Style the reset and secondary buttons differently */
+.report-button[type="reset"],
+.report-button[type="button"] {
+    background-color:#7ecdfc;
+    color:white;
+    border: 2px solid #ddd;
+    box-shadow: none;
+}
+
+.report-button[type="reset"]:hover,
+.report-button[type="button"]:hover {
+    background: #7ecdfc;
+    border-color: #bbb;
+    transform: translateY(-2px);
+    box-shadow: none;
+}
+
+.report-button[type="reset"]:active,
+.report-button[type="button"]:active {
+    transform: translateY(0);
+}
+
+/* Last rows spacing for buttons */
+.table tr:last-child td,
+.table tr:nth-last-child(2) td,
+.table tr:nth-last-child(3) td {
+    padding-top: 10px;
+    padding-bottom: 4px;
+    text-align: center;
+}
+
+/* Responsive design */
+@media (max-width: 600px) {
+    body > h1 {
+        font-size: 1.3rem;
+        margin: 20px 0 10px;
+    }
+
+    form {
+        padding: 20px 15px;
+        margin: 15px auto 25px;
+    }
+
+    .table td {
+        display: block;
+        width: 100%;
+        padding: 6px 0;
+    }
+
+    .table td:first-child {
+        padding-top: 14px;
+        font-size: 0.85rem;
+    }
+
+    .table th h2 {
+        font-size: 1.1rem;
+    }
+
+    .report-button {
+        margin-bottom: 10px;
+    }
+
+    .table textarea {
+        min-height: 60px;
+    }
+}

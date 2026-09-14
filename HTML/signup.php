@@ -3,8 +3,9 @@
         <meta charset = "UTF-8">
         <meta name = "viewport" content = "width=device-width, initial-scale=1.0">
         <title>Sign Up</title>
-         <link rel="stylesheet" href="../CSS/signup.css">
-         <script src="../../MakhandaGateway/JS/signup.js?v=2" defer></script>
+        <link rel="stylesheet" href="../CSS/signup.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
     </head>
     <body>
 
@@ -16,29 +17,29 @@ include '../PHP/navbar.php';
             <table class="table" id="signup-table">
                 <tr>
                     <th colspan = "2">
-                        <h3>COMPLETE USER REGISTRATION FORM</h3>
+                        <h2>COMPLETE USER REGISTRATION FORM</h2>
                     </th>
                 </tr>
                 
                 <tr>
-                    <td>FIRST NAME</td>
+                    <td>FIRST NAME:</td>
                     <td>
                         <input type = "text" name = "firstname" maxlength = "50" size = "20" value = "" required>
                     </td>
                 </tr>
 
                 <tr>
-                    <td>SURNAME</td>
+                    <td>SURNAME:</td>
                     <td>
                         <input type = "text" name = "surname" maxlength = "50" size = "20" value = "" required>
                     </td>
                 </tr>
 
                 <tr>
-                    <td>USER ROLE</td>
+                    <td>USER ROLE:</td>
                     <td>
                         <select class="signup-dropdown" id="signup-userrole" name="userrole" required>
-                            <option value="">Select Role</option>
+                            <option value="">Select Role:</option>
                             <option value="System Administrator">System Administrator</option>
                             <option value="Ward Councillor">Ward Councillor</option>
                             <option value="Municipal Officer">Municipal Officer</option>
@@ -48,7 +49,7 @@ include '../PHP/navbar.php';
                 </tr>
                 
                 <tr class="signup-ward-dropdown" id="signup-ward-option" style="display:none">
-                    <td>WARD</td>
+                    <td>WARD:</td>
                     <td>
                         <select id="ward" name="ward">
                             <option value="">Select Ward</option>
@@ -71,21 +72,21 @@ include '../PHP/navbar.php';
                 </tr>
 
                 <tr>
-                    <td>PHONE NUMBER</td>
+                    <td>PHONE NUMBER:</td>
                     <td>
                         <input type = "text" name = "phone" maxlength = "14" size = "20" value = "" required>
                     </td>
                 </tr>
 
                 <tr>
-                    <td>EMAIL ADDRESS</td>
+                    <td>EMAIL ADDRESS:</td>
                     <td>
                         <input type = "text" name = "email" maxlength = "50" size = "20" value = "" required>
                     </td>
                 </tr>
                 
                 <tr>
-                    <td>PASSWORD</td>
+                    <td>PASSWORD:</td>
                     <td>
                         <input type = "password" name = "pword" maxlength = "200" size = "20" value = "" required>
                     </td>

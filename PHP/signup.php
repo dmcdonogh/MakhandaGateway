@@ -6,8 +6,8 @@ if($_SERVER["REQUEST_METHOD"] == "POST")
         $firstname = isset($_POST["firstname"]) ? trim($_POST["firstname"]): '';
         $surname = isset($_POST["surname"]) ? trim($_POST["surname"]): '';
         $userrole = isset($_POST["userrole"]) ? trim($_POST["userrole"]): '';
-        $ward = isset($_POST["ward"]) ? trim($_POST["ward"]) : '';
-        $email = isset($_POST["email"]) ? trim(htmlspecialchars($_POST["email"])): '';
+        $ward = isset($_POST["ward"]) ? trim($_POST["ward"]) : ''; 
+        $email = isset($_POST["email"]) ? filter_var($email,FILTER_VALIDATE_EMAIL) ? trim(htmlspecialchars($_POST["email"])): '';
         $pword = isset($_POST["pword"]) ? $_POST["pword"] : '';
         $hash_pword = !empty($pword) ? password_hash($pword, PASSWORD_DEFAULT): '';
         
@@ -35,12 +35,12 @@ if($_SERVER["REQUEST_METHOD"] == "POST")
         if($stmt->execute())
             {
                 echo "Record for " . $firstname . " " . $surname . " successfully created. <br><br>";
-                echo "<a href = \"login.html\">Go to Login page</a>";
+                echo "<a href = ../HTML/signin.php> Go to Login page</a>";
             }
 
              else
             {
-                die("<a href = \"signup.html\">Back to Signup</a><br>". 
+                die("<a href = ../HTML/signup.php> Back to Signup</a><br>". 
                 "Record could not be created: " . $conn->error);
             }
        

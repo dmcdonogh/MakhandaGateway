@@ -9,30 +9,35 @@
 * {
   box-sizing: border-box;
 }
-
+body{
+  padding-bottom: 200px; 
+}
 /* Create four equal columns that floats next to each other */
 .column {
   float: left;
   width: 25%;
   padding: 10px;
   height: 150px; 
+  text-align: center
 }
 
 
 /* Clear floats after the columns */
-.row:after {
+.row::after {
   content: "";
   display: table;
   clear: both;
 }
 
 h3 {
-  color: black; 
+  color: #516bb5; 
   text-align: center;
 }
 
 p {
   text-align: center;
+  padding:0;
+
 }
 
 .mapforfooter-image {
@@ -44,15 +49,19 @@ p {
 }
 
 footer {
-  position: fixed;
-  left: 0;
-  bottom: 40px;
-  width: 100%;
-  text-align: center;
+background-color: #d3d3d3;
+   border-top: 2px solid black;
+   margin-top: 40px;
+   padding: 20px 10px;
+   font-family: 'Times New Roman';
+   color:black;
 }
 
-
-
+.row {
+   display: flex;
+   flex-wrap: wrap;
+   justify-content: space-around;
+}
 
 </style>
 

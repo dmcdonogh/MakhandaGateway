@@ -11,7 +11,7 @@ h1{
   
 }
 .logo-image{
-   border: 1px solid #ddd;
+   border: none;              /* <-- removed the border */
    border-radius: 4px;
    padding: 5px;
    width: 150px;

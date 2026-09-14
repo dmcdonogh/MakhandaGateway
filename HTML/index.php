@@ -12,7 +12,7 @@
    require '../DB/dbConnect.php';
    include '../PHP/navbar.php';
 ?>
-<!-- download pic  -->
+<img class="logo-image" id="logo-image" src="../Images/backg.jpg" alt="Makhanda Gateway Logo">
 <!-- <img src="makhanda.png" alt="Picture of Makhanda">   -->
 
 <h1>Latest Reports</h1>

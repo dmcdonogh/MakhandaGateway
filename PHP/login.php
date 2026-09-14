@@ -41,7 +41,8 @@ $stmt->execute();
 $result + $stmt->getresult();
 
 if ($result->num_rows === 0){
-    $sqllogt1 = "INSERT INTO logtrails (email, comment, attempttime, reason) VALUES (?,?,?,?)";
+    $sqllogt1 = "INSERT INTO logtrails (email, comment, attempttime, reason) 
+    VALUES (?,?,?,?)";
     $stmt1 = $conn->prepare($sqllogt1);
     $stmt1->bind_param("ssss", $email, $comment1, $timestamp, $reason1);
     $stmt1->execute();
@@ -58,7 +59,8 @@ if ($result->num_rows === 0){
         session_regenerate_id(true);
 
         //prepared statement for successful login log
-        $sqllogt = "INSERT INTO logtrails (email, comment, attempttime, reason) VALUES (?,?,?,?)";
+        $sqllogt = "INSERT INTO logtrails (email, comment, attempttime, reason) 
+        VALUES (?,?,?,?)";
         $stmt2 = $conn->prepare($sqllogt);
         $stmt2->bind_param("ssss", $uname, $comment2, $timestamp, $reason2);
         $stmt2->execute();
@@ -69,11 +71,11 @@ if ($result->num_rows === 0){
         //directing to relevent page
         switch($row['userrole']) {
 
-        case "Administrator":
+        case "System Administrator":
             //code
             break;
 
-        case "Councillor":
+        case "Ward Councillor":
             //code
             break;
 
@@ -81,7 +83,7 @@ if ($result->num_rows === 0){
             //code
             break;
 
-        case "Officer";
+        case "Municipal Officer";
             //code
             break;
 
@@ -93,7 +95,8 @@ if ($result->num_rows === 0){
     } else {
         //Password incorrect 
         //Use prepared statement for failed login log
-        $sqllogt1 = "INSERT INTO logtrails (username, comment, attempttime,reason) VALUES (?,?,?,?)";
+        $sqllogt1 = "INSERT INTO logtrails (username, comment, attempttime,reason) 
+        VALUES (?,?,?,?)";
         $stmt1 = $conn->prepare($sqllogt1);
         $stmt1->bind_param("ssss", $uname, $comment1, $timestamp, $reason3);
         $stmt1->execute();

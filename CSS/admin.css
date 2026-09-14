@@ -4,39 +4,19 @@ body{
    font-family: 'Times New Roman';
 }
 
-h1{
-   font-family: 'Times New Roman';
-   text-align: center;
-   color: #516bb5;
-  
-}
 .logo-image{
-   border: 1px solid #ddd;
+ border: none;              /* <-- removed the border */
    border-radius: 4px;
    padding: 5px;
    width: 150px;
 }
 
 .about-profile-img{
-   border: 1px solid #ddd;
+   border: none;              /* <-- removed the border */
    border-radius: 4px;
    padding: 5px;
    width: 150px;
 }
-
-h2{
- font-family: 'Times New Roman';
- color: #516bb5;
-}
-
-h3{
- font-family: 'Times New Roman';
- color: #516BB5;
-}
- p{ font-family: 'Times New Roman';
-    text-align: justify;
-    padding:10px;
- }
  .navbar{
     display: flex;
     flex-direction: row;
@@ -45,7 +25,6 @@ h3{
     list-style: none;
     margin: 0;
     padding: 0;
-
 }
 
 .navbar-profilelinks {
@@ -66,31 +45,97 @@ a:link, a:visited{
 a:hover, a:active{
    color:#516BB5;
 }
-
-
-
+h1 {
+    color: #516bb5;
+    font-size: 1.8rem;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    margin: 30px 0 10px;
+    text-shadow: 0 2px 6px rgba(0, 0, 0, 0.25);
+    text-align: center;
+}
 button{ /*most buttons*/
-   display: inline-block;
-   text-align: center;
-   font-family: 'Times New Roman';
-   background-color: #DAE8FC;
-   border: 1px solid black;
-   border-radius: 4px;
-   padding: 14px 40px;
-   text-decoration: none;
-   font-size: 16px;
-   cursor: pointer;
-  /* Set a baseline width and height */
-   min-width: 50px; 
-   height: 45px;
-  /* Ensures padding and borders are included within the width/height */
-   /* box-sizing: border-box;  */
-  /* Optional: Aesthetics */
-  padding: 10px;
-  text-align: center;
+   width: 100%;
+    padding: 12px 28px;
+    border: none;
+    border-radius: 6px;
+    font-size: 0.95rem;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+    text-transform: uppercase;
+    background-color:#7ecdfc;
+    color: #ffffff;
+    box-shadow: 0 4px 12px rgba(102, 126, 234, 0.4);
+    margin-top: 6px;
  }
 
  
- #backbutton{ background-color:#7ecdfc;} 
  
-   
+   button:hover, #backbutton:hover{
+background-color:#7ecdfc;
+
+    transform: translateY(-2px);
+    box-shadow: 0 6px 18px rgba(102, 126, 234, 0.5);
+   }
+
+.admin-button-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 0 15px;
+}
+
+.admin-button {
+    width: 100%;
+    padding: 15px 20px;
+    font-size: 1rem;
+    font-weight: 600;
+    color: #fff;
+    background-color: #7ecdfc;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.2s ease, transform 0.1s ease;
+}
+
+.admin-button:hover {
+    background-color: #7ecdfc;
+}
+
+.admin-button:active {
+    transform: scale(0.98);
+}
+
+/* Make the odd/last button span the full row */
+.admin-button:last-child {
+    grid-column: 1 / -1;
+}
+
+/* Back button styling */
+#backbutton {
+   grid-column:1/-1;
+    background-color: #7ecdfc;
+    justify-self:center;
+    width:auto;
+    padding: 12px 40px;
+    display:flex;
+
+}
+
+#backbutton:hover {
+    background-color: #7ecdfc;
+}
+
+/* Stack on mobile */
+@media (max-width: 600px) {
+    .admin-button-container {
+        grid-template-columns: 1fr;
+    }
+    .admin-button:last-child {
+        grid-column: auto;
+    }
+}

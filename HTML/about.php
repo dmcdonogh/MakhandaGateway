@@ -23,41 +23,45 @@
 
       <h4>Meet the team</h4>
 
-      <div>
+      <div class="team-member">
          <p>Caitlin</p>
          <img class=about-profile-img src="../Images/Caitlin.jpg" alt="Image of Caitlin">
       </div>
 
-      <div>
+      <div class="team-member">
          <p>Megan</p>
       <img class=about-profile-img src="../Images/Megs.jpg" alt="Image of Megan">
       </div>
 
-      <div>
+      <div class="team-member">
          <p>Beng</p>
       <img class=about-profile-img src="../Images/Beng.jpg" alt="Image of Beng">
       </div>
 
-      <div>
+      <div class="team-member">
          <p>Dylan</p>
       <img class=about-profile-img src="../Images/Dylan.jpg" alt="Image of Dylan">
       </div>
 
-      <div>
+      <div class="team-member">
          <p>Micky</p>
          <img class=about-profile-img src="../Images/Micky.jpg" alt="Image of Micky">
       </div>
 
-
+<div class="button-row">
+   <div class="button item">
       <h4>Contact Us</h4>
-      <button>Contact us here</button>
+      <a href="contact.php"><button>Contact us here</button></a>
+</div>
 
+   <div class="button item">
       <h4>Would you like to submit a report</h4>
-      <button>Make a report</button>
+      <a href="report.php"><button>Make a report</button></a>
+</div></div>
 
    <?php include '../PHP/footer.php';?>
 
-      <div>
+      <div class="copyright">
          <p>&copy;2026 Makhanda Gateway-All rights reserved</p>
       </div>
    </body>

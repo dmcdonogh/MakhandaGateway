@@ -3,7 +3,7 @@ body{
    background-color: #d3d3d3;
    font-family: 'Times New Roman';
 }
-h2{
+h1,h2{
    font-family: 'Times New Roman';
    color:#516BB5;
 }
@@ -12,7 +12,7 @@ h4{
    color:#516BB5;
 }
 .logo-image{
-   border: 1px solid #ddd;
+   border: none;             
    border-radius: 4px;
    padding: 5px;
    width: 150px;
@@ -51,16 +51,22 @@ a:hover, a:active{
 }
 fieldset {
   background-color: white;
+  border: 1px solid #999;
+  border-radius: 25px;          /* <-- rounded outer form container */
+  padding: 25px;
+  margin: 20px auto;
+  max-width: 900px;
 }
 
 .report-button{ /*most buttons*/
    display:flex;
-   text-align: center;
+   justify-content: center;
    font-family: 'Times New Roman';
    background-color: #7ecdfc;
    border: 1px solid black;
-   border-radius: 4px;
-   padding: 10px 20px;
+   transition: background-color 0.3s ease;
+   border-radius: 25px;
+   padding: 10px 28px;
    margin: 8px 0;
    text-decoration: none;
    font-size: 16px;
@@ -68,14 +74,23 @@ fieldset {
   /* Set a baseline width and height */
    min-width: 200px; 
    height: 45px;
-  text-align: center;
  }
 
+.report-button:hover{
+background-color: #DAE8FC;
+ }
+.report-button:active{
+   transform: scale(0.98);
+}
  #report-button-clear{
+   background-color: #7ECDFC;
+ }
+
+ #report-button-clear:hover{
    background-color: #DAE8FC;
  }
 
-legend {
+legend{
   background-color: white;
   padding: 5px 10px;
   display: block;
@@ -83,24 +98,63 @@ legend {
   padding-right: 2px;
   border-radius:50px;
 }
-
 #INCIDENT-table{
    font-family: 'Times New Roman';
    color:#516BB5;
    border-collapse: separate;
-   background-color: lightblue;
-   border: 1px solid blue;
-   padding-top: 8px;
-   padding-bottom: 8px;
+   background-color: lightgrey;
+   border: 1px solid black;
+   border-radius: 25px;
+   padding: 20px;
+   width: 100%;
    border-spacing: 15px 50px;
-}
-th{
-
 }
 td{
 font-family: 'Times New Roman';
    color:#516BB5;
+   padding: 12px 18px;
 }
+
+input[type="text"],
+input[type="date"],
+input[type="file"],
+textarea,select {
+   border: 1px solid #999;
+   border-radius: 12px;          /* rounded corners for fill-in areas */
+   padding: 10px 14px;
+   font-family: 'Times New Roman';
+   font-size: 15px;
+   color: #333;
+   cursor:pointer;
+   background-color: #ffffff;
+   width: 100%;
+   box-sizing: border-box;
+   outline: none;
+   transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+input[type="text"]:focus,
+input[type="date"]:focus,
+input[type="file"]:focus,
+textarea:focus,
+select:focus {
+   border-color: #516BB5;
+   box-shadow: 0 0 6px rgba(81, 107, 181, 0.4);
+}
+
+input[type="file"] {
+   border-radius: 12px;
+   padding: 8px 12px;
+   cursor: pointer;
+}
+
+textarea {
+   border-radius: 14px;
+   resize: vertical;
+   min-height: 50px;
+}
+
+
 
 
 /*add color for the input details*/

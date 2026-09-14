@@ -13,7 +13,7 @@
 
       <!-- LOGO -->
       <article class="navbar-logo" id="navbar-logo">
-            <img class="logo-image" id="navbar-logo-image" src="../Images/logo_icon.png" alt="Makhanda Gateway Logo">
+            <img class="logo-image" id="logo-image" src="../Images/logo.png" alt="Makhanda Gateway Logo">
       </article>
 
       <!-- NAVBAR BUTTONS -->
@@ -22,7 +22,7 @@
          <a href="../HTML/report.php">Report</a>
          <a href="../HTML/about.php">About Us</a>
          <a href="../HTML/contact.php">Contact Us</a>
-         <a href="../HTML/admin.php">Admin Panel</a>
+         <!-- <a href="../HTML/admin.php">Admin Panel</a> -->
          <!--  <?php if ($role === 'admin'): ?>
                <a href="administrator.php">Admin</a>
                <?php endif; ?>
