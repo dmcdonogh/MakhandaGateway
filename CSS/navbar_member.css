@@ -1,0 +1,95 @@
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #d3d3d3;
+    font-family: 'Times New Roman';
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin: 0;
+    padding: 0;
+    color: black;
+}
+
+/* Logo */
+.navbar-logo {
+    margin-right: 25px;
+    background-color: white;
+}
+
+.logo-image {
+    width: 80px;
+}
+
+/* Normal navbar links */
+.navbar-navlinks {
+    display: flex;
+    gap: 25px;
+}
+
+/* Push hamburger to the right */
+.hamburger {
+    position: relative;
+    margin-left: auto;
+}
+
+.navbar-navlinks a {
+    color: black;
+    text-decoration: none;
+}
+
+/* Hamburger button */
+.hamburger button {
+    background: none;
+    border: none;
+    color: black;
+    font-size: 25px;
+    cursor: pointer;
+}
+
+.navbar-navlinks a {
+    color: black;
+    text-decoration: none;
+}
+
+
+.hamburger :hover
+{
+    color: white;
+}
+
+/* Dropdown */
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background-color: #333;
+    min-width: 180px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    z-index: 1000;
+}
+
+/* Dropdown links */
+.dropdown-menu a {
+    display: block;
+    color: white;
+    text-decoration: none;
+    padding: 15px;
+}
+
+.dropdown-menu a:hover {
+    background-color: #516BB5;
+}
+
+/* Show dropdown when active */
+.dropdown-menu.active {
+    display: block;
+    color: #516BB5;
+}
+

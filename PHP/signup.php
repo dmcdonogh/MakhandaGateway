@@ -1,14 +1,16 @@
 <?php
-
+Session_start();
 include "../DB/dbConnect.php";
+
 if($_SERVER["REQUEST_METHOD"] == "POST")
     {
         $firstname = isset($_POST["firstname"]) ? trim($_POST["firstname"]): '';
         $surname = isset($_POST["surname"]) ? trim($_POST["surname"]): '';
         $userrole = isset($_POST["userrole"]) ? trim($_POST["userrole"]): '';
-        $ward = isset($_POST["ward"]) ? trim($_POST["ward"]) : ''; 
-        $email = isset($_POST["email"]) ? filter_var($email,FILTER_VALIDATE_EMAIL) ? trim(htmlspecialchars($_POST["email"])): '';
+        $ward = isset($_POST["ward"]) ? (int)$_POST["ward"] : 0;
+        $email = isset($_POST["email"]) ? trim(htmlspecialchars($_POST["email"])) : '';
         $pword = isset($_POST["pword"]) ? $_POST["pword"] : '';
+        $security= isset($_POST["maiden"]) ? trim($_POST["maiden"]): '';
         $hash_pword = !empty($pword) ? password_hash($pword, PASSWORD_DEFAULT): '';
         
         if ($userrole === "Community Member")
@@ -22,30 +24,35 @@ if($_SERVER["REQUEST_METHOD"] == "POST")
 
         //check if the user has a deactive account and reactivate with new password and info
 
-        $stmt = $conn->prepare("INSERT INTO users(first_name, last_name, role, ward, email, password, status)
-                                VALUES(?,?,?,?,?,?,?)");
+        $stmt = $conn->prepare("INSERT INTO users(first_name, last_name, role, ward, email, password, status, security)
+                                VALUES(?,?,?,?,?,?,?,?)");
         
         if ($stmt === false)
         {
             die("Prepare failed: " . $conn->error);
         }
 
-        $stmt -> bind_param("sssisss", $firstname, $surname, $userrole, $ward, $email, $hash_pword, $account_status);
+        $stmt -> bind_param("sssissss", $firstname, $surname, $userrole, $ward, $email, $hash_pword, $account_status, $security);
+        
+        
+        if ($stmt->execute()) {
+            header("Location: ../HTML/login.php");
+            exit();
+            
+        } else {
 
-        if($stmt->execute())
-            {
-                echo "Record for " . $firstname . " " . $surname . " successfully created. <br><br>";
-                echo "<a href = ../HTML/signin.php> Go to Login page</a>";
-            }
+            $error = json_encode($stmt->error);
 
-             else
-            {
-                die("<a href = ../HTML/signup.php> Back to Signup</a><br>". 
-                "Record could not be created: " . $conn->error);
-            }
-       
-                $stmt->close();
-                $conn->close();
+            echo "<script>
+                alert(" . $error . ");
+                window.location.href = '../HTML/signup.php';
+            </script>";
+
+            exit();
+        }
+
+        $stmt->close();
+        $conn->close();
     }
 
 ?>

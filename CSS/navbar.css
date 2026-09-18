@@ -1,39 +1,151 @@
-.logo-image{
-   border: none;              /* <-- removed the border */
-   border-radius: 4px;
-   padding: 5px;
-   width: 50px;
-}
+/* =========================
+   Navbar
+   ========================= */
 
-.navbar-logo{
-   border: 1px solid black;
-}
-
-.about-profile-img{
-   border: 1px solid #ddd;
-   border-radius: 4px;
-   padding: 5px;
-   width: 150px;
-}
-
- .navbar{
+.navbar {
     display: flex;
-    flex-direction: row;
-    align-items:center;
-    gap: 1rem;
-    list-style: none;
+    align-items: center;
+
+    width: 100%;
+    min-height: 70px;
+
+    padding: 0 30px;
     margin: 0;
-    padding: 0;
+
+    background-color: #7ecdfc;
+
+    box-sizing: border-box;
 }
+
+/* =========================
+   Logo
+   ========================= */
+
+.navbar-logo {
+    display: flex;
+    align-items: center;
+
+    margin-right: 40px;
+    flex-shrink: 0;
+
+    background-color: white;
+}
+
+.logo-image {
+    display: block;
+    width: 80px;
+    height: auto;
+}
+
+/* =========================
+   Main navigation
+   ========================= */
+
+.navbar-navlinks {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.navbar-navlinks a {
+    color: black;
+    text-decoration: none;
+    white-space: nowrap;
+}
+
+.navbar-navlinks a:hover {
+    color: #516bb5;
+}
+
+/* =========================
+   Right side / hamburger
+   ========================= */
 
 .navbar-profilelinks {
-   margin-left: auto;
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    margin-left: auto;
+    margin-right: 0;
 }
 
-a:link, a:visited{
-   color: black;
-   text-decoration: none;
+.navbar-profilelinks a {
+    display: inline-block;
+    color: black;
+    text-decoration: none;
+    white-space: nowrap;
 }
-a:hover, a:active{
-   color:#516BB5;
+
+.navbar-profilelinks a:hover {
+    color: #516bb5;
+}
+
+
+/* =========================
+   Hamburger
+   ========================= */
+
+.hamburger {
+    position: relative;
+}
+
+.hamburger button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 40px;
+    height: 40px;
+
+    padding: 0;
+    border: none;
+
+    background: transparent;
+
+    color: black;
+    font-size: 25px;
+
+    cursor: pointer;
+}
+
+.hamburger button:hover {
+    color: #516bb5;
+}
+
+/* =========================
+   Dropdown
+   ========================= */
+
+.dropdown-menu {
+    display: none;
+
+    position: absolute;
+    top: calc(100% + 5px);
+    right: 0;
+
+    min-width: 180px;
+
+    background-color: #333;
+
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+
+    z-index: 1000;
+}
+
+.dropdown-menu.active {
+    display: block;
+}
+
+.dropdown-menu a {
+    display: block;
+
+    padding: 15px;
+
+    color: white !important;
+    text-decoration: none;
+    white-space: nowrap;
+}
+
+.dropdown-menu a:hover {
+    background-color: #516bb5;
 }

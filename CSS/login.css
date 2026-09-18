@@ -1,0 +1,146 @@
+/*Layout */
+.login-page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 20px;
+    min-height: calc(100vh - 80px);
+    /* adjust for navbar */
+}
+
+.login-card {
+    background: #fff;
+    width: 100%;
+    max-width: 420px;
+    padding: 40px 35px;
+    border-radius: 14px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+    animation: fadeUp 0.5s ease;
+}
+
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/*Titles */
+.login-title {
+    margin: 0 0 6px;
+    font-size: 26px;
+    font-weight: 700;
+    text-align: center;
+    color: #516bb5;
+}
+
+.login-subtitle {
+    margin: 0 0 25px;
+    text-align: center;
+    color: #516bb5;
+    font-size: 14px;
+}
+
+
+/* -------- Responsive -------- */
+@media (max-width: 480px) {
+    .login-card {
+        padding: 30px 22px;
+        border-radius: 10px;
+    }
+
+    .login-title {
+        font-size: 22px;
+    }
+
+    .form-row {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 8px;
+    }
+
+    .GoBack-button {
+        display: flex;
+        width: 100%;
+        margin: 6px 0;
+        padding: 12px 20px;
+        font-size: 0.85rem;
+    }
+}
+
+.input-icon {
+    position: relative;
+    text-align: center;
+    width: 100%;
+    height: 44px;
+    border: 3px solid black;
+}
+
+.input-icon input {
+    width: 100%;
+    height: 44px;
+    box-sizing: border-box;
+    padding: 0 45px 0 40px;
+    border: 1.5px solid #dfe1e5;
+    border-radius: 8px;
+    font-size: 15px;
+    background: #fafafa;
+}
+
+/* Lock icon */
+.input-icon>i.fa-lock {
+    position: absolute;
+    left: 14px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #9aa0a6;
+    font-size: 14px;
+    pointer-events: none;
+}
+
+.input-icon>i.fa-envelope {
+    position: absolute;
+    left: 14px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #9aa0a6;
+    font-size: 14px;
+    pointer-events: none;
+}
+
+.input-icon>i.fa-eye {
+    /* position: absolute; */
+    /* right: 14px; */
+    top: 50%;
+    /* transform: translateY(-50%); */
+    color: #9aa0a6;
+    font-size: 14px;
+    pointer-events: none;
+}
+
+/* Eye button */
+.toggle-password button {
+    justify-content: center;
+    position: absolute;
+    right: 14px;
+    top: -10%;
+    width: 44px;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+}
+
+/* Eye icon */
+.input-icon .toggle-password i.fa-eye {
+    position: static;
+    display: block;
+    transform: none;
+    color: #9aa0a6;
+    font-size: 14px;
+    line-height: 1;
+}

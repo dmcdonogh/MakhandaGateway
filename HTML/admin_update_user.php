@@ -5,6 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Update account details</title>
     <link rel="stylesheet" href="../CSS/style.css">
+    <link rel="stylesheet" href="../CSS/navbar.css">
+    <link rel="stylesheet" href="../CSS/forms.css">
+
+    <link rel="stylesheet" href="../CSS/report.css">
     <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 </head>
 <body>
@@ -34,7 +38,7 @@ if ($result->num_rows === 0)
 $row2 = $result->fetch_assoc();
 $stmt->close();
 
-echo "User = " . $row2['email'] . " extracted from database using query<br><br>";
+// echo "User = " . $row2['email'] . " extracted from database using query<br><br>";
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") 
 {
@@ -71,81 +75,87 @@ if ($_SERVER["REQUEST_METHOD"] == "POST")
     }
 }
 ?>
-<form action = "" method = "POST">
-    <table bgcolor = "" width = 30%>
-        <tr><th colspan = "2">
-            <h3>USER UPDATE FORM </h3>
-        </th></tr>
+    <form action = "" method = "POST" class="update-user-form">
+        <table bgcolor = "" width = 30%>
+            <tr><th colspan = "2">
+                <h3>USER UPDATE FORM </h3>
+            </th></tr>
 
-        <tr>
-            <td>FIRSTNAME </td> 
-            <td><input type = "text" name = "first_name" maxlength = "35" size = "20"
-                        value = "<?php echo $row2['first_name'];?>" readonly></td>
-        </tr>
+            <tr>
+                <td><h4>FIRSTNAME:</h4></td> 
+                <td><input type = "text" name = "first_name" maxlength = "35" size = "20"
+                            value = "<?php echo $row2['first_name'];?>" readonly></td>
+            </tr>
 
-        <tr>
-            <td>SURNAME </td> 
-            <td><input type = "text" name = "last_name" maxlength = "35" size = "20"
-                        value = "<?php echo $row2['last_name'];?>" readonly></td>
-        </tr>
+            <tr>
+                <td><h4>SURNAME:</h4></td> 
+                <td><input type = "text" name = "last_name" maxlength = "35" size = "20"
+                            value = "<?php echo $row2['last_name'];?>" readonly></td>
+            </tr>
 
-        <tr>
-            <td>WARD </td> 
-            <td><input type = "text" name = "ward" maxlength = "10" size = "15"
-                        value = "<?php echo $row2['ward'];?>" readonly></td>
-        </tr>
+            <tr>
+                <td><h4>WARD:</h4></td> 
+                <td><input type = "text" name = "ward" maxlength = "10" size = "15"
+                            value = "<?php echo $row2['ward'];?>" readonly></td>
+            </tr>
 
-        <tr>
-            <td>EMAIL ADDRESS </td> 
-            <td><input type = "email" name = "email" maxlength = "35" size = "20"
-                        value = "<?php echo $row2['email'];?>" readonly></td>
-        </tr>
+            <tr>
+                <td><h4>EMAIL ADDRESS:</h4></td> 
+                <td><input type = "email" name = "email" maxlength = "35" size = "20"
+                            value = "<?php echo $row2['email'];?>" readonly></td>
+            </tr>
 
-        <tr>
-            <td>ROLE</td> 
-                <td>
-                    <select name="role" required>
-                        <option value="System Administrator" <?php if ($row2['role'] == 'System Administrator') echo 'selected'; ?>>
-                            System Administrator
+            <tr>
+                <td><h4>ROLE:</h4></td> 
+                    <td>
+                        <select name="role" required>
+                            <option value="System Administrator" <?php if ($row2['role'] == 'System Administrator') echo 'selected'; ?>>
+                                System Administrator
+                            </option>
+
+                            <option value="Ward Councillor" <?php if ($row2['role'] == 'Ward Councillor') echo 'selected'; ?>>
+                                Ward Councillor
+                            </option>
+
+                            <option value="Municipal Officer" <?php if ($row2['role'] == 'Municipal Officer') echo 'selected'; ?>>
+                                Municipal Officer
+                            </option>
+
+                            <option value="Community Member" <?php if ($row2['role'] == 'Community Member') echo 'selected'; ?>>
+                                Community Member
+                            </option>
+                        </select>
+                </td>
+            </tr>
+
+            <tr>
+                <td><h4>STATUS:</h4></td> 
+                    <td><select name="status" required>
+                        <option value="active" <?php if ($row2['status'] == 'active') echo 'selected'; ?>>
+                            Active
                         </option>
 
-                        <option value="Ward Councillor" <?php if ($row2['role'] == 'Ward Councillor') echo 'selected'; ?>>
-                            Ward Councillor
+                        <option value="pending" <?php if ($row2['status'] == 'pending') echo 'selected'; ?>>
+                            Pending
                         </option>
 
-                        <option value="Municipal Officer" <?php if ($row2['role'] == 'Municipal Officer') echo 'selected'; ?>>
-                            Municipal Officer
-                        </option>
-
-                        <option value="Community Member" <?php if ($row2['role'] == 'Community Member') echo 'selected'; ?>>
-                            Community Member
+                        <option value="inactive" <?php if ($row2['status'] == 'inactive') echo 'selected'; ?>>
+                            Inactive
                         </option>
                     </select>
-            </td>
-        </tr>
+                </td>
+            </tr>
 
-        <tr>
-            <td>STATUS </td> 
-                <td><select name="status" required>
-                    <option value="active" <?php if ($row2['status'] == 'active') echo 'selected'; ?>>
-                        Active
-                    </option>
+            <tr>
+                <td><input type = "submit" value = "    Update user    "></td>
+                <td><input type = "reset" value = "    Clear form    "></td>
+            </tr>
+        </table>
+    </form>
 
-                    <option value="pending" <?php if ($row2['status'] == 'pending') echo 'selected'; ?>>
-                        Pending
-                    </option>
-
-                    <option value="inactive" <?php if ($row2['status'] == 'inactive') echo 'selected'; ?>>
-                        Inactive
-                    </option>
-                </select>
-            </td>
-        </tr>
-
-        <tr>
-            <td><input type = "submit" value = "    Update user    "></td>
-            <td><input type = "reset" value = "    Clear form    "></td>
-        </tr>
-    </table>
-</form>
+    <article class="GoBack-wrapper">
+        <button type="button" class="GoBack-button" onclick="history.back()">Go Back</button>
+    </article>
+<?php include '../PHP/footer.php';?>
 </body>
+</html>

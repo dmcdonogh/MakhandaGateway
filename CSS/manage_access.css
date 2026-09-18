@@ -1,121 +1,129 @@
-body{
 
-   background-color: #d3d3d3;
-   font-family: 'Times New Roman';
-}
-
-h1{
-   font-family: 'Times New Roman';
-   text-align: center;
-   color: #516bb5;
-  
-}
-.logo-image{
-   border: 1px solid #ddd;
-   border-radius: 4px;
-   padding: 5px;
-   width: 150px;
-}
-
-.about-profile-img{
-   border: 1px solid #ddd;
-   border-radius: 4px;
-   padding: 5px;
-   width: 150px;
-}
-
-h2{
- font-family: 'Times New Roman';
- color: #516bb5;
-}
-
-h3{
- font-family: 'Times New Roman';
- color: #516BB5;
-}
- p{ font-family: 'Times New Roman';
-    text-align: justify;
-    padding:10px;
- }
- p.outset{
-   border: 2px solid #d3d3d3;
-   border-radius: 16px;
- }
-
- .navbar{
+center {
+    width: 100%;
     display: flex;
-    flex-direction: row;
-    align-items:center;
-    gap: 1rem;
-    list-style: none;
-    margin: 0;
-    padding: 0;
-
+    justify-content: center;
 }
 
-.navbar-profilelinks {
-   margin-left: auto;
-   /* flex-direction: row-reverse;
-   align-items:center;
-   gap: 1rem;
-   list-style: none;
-   margin: 0;
-   padding: 0; */ 
-   /* spacing between links */
+table {
+    width: 90% !important;
+    max-width: 1400px;
+    border-collapse: collapse;
+    font-size: 0.95rem;
+    background: #ffffff;
+    border-radius: 1.5rem;
+    overflow: hidden;
+    box-shadow: 0 20px 35px -8px rgba(0, 20, 30, 0.15),
+        0 10px 15px -6px rgba(0, 0, 0, 0.05);
+    border: 1px solid #e2eaf2;
+    margin-bottom: 1.5rem;
 }
 
-a:link, a:visited{
-   color: black;
-   text-decoration: none;
+table tr:first-child th,
+table th {
+    background: #7ecdfc;
+    color: #ffffff !important;
+    font-weight: 600;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    padding: 16px 14px;
+    text-align: left;
+    white-space: nowrap;
+    border-bottom: 2px solid #cdddec;
 }
-a:hover, a:active{
-   color:#516BB5;
+
+table td {
+    padding: 14px 16px;
+    color: #516bb5;
+    border-bottom: 1px solid #e2eaf3;
+    background: #ffffff;
+    transition: background 0.15s ease;
+    vertical-align: middle;
 }
 
 
+table tr:nth-child(even) td {
+    background: #fafdff;
+}
 
-.report-button{ /*most buttons*/
-   display: inline-block;
-   text-align: center;
-   font-family: 'Times New Roman';
-   background-color: #7ecdfc;
-   border: 1px solid black;
-   border-radius: 4px;
-   padding: 14px 40px;
-   text-decoration: none;
-   font-size: 16px;
-   cursor: pointer;
-  /* Set a baseline width and height */
-   min-width: 200px; 
-   height: 45px;
-  /* Ensures padding and borders are included within the width/height */
-   /* box-sizing: border-box;  */
-  /* Optional: Aesthetics */
-  padding: 10px;
-  text-align: center;
- }
+table tr:hover td {
+    background: #eef6ff;
+}
 
- #report-button-clear{
-   background-color: #DAE8FC;
- }
-   
-.buttonClick{ 
-    font-family: 'Times New Roman';
-       background-color: #DAE8FC;
-  border:black;
-  padding: 14px 40px;
-   border-radius: 4px;
-  font-size: 16px;
- cursor: pointer;
+table tr:last-child td {
+    border-bottom: none;
+}
+table td a {
+    text-decoration: none;
+}
 
-  /* Set a baseline width and height */
-  min-width: 200px; 
-  height: 45px;
+table td button {
+    background: #7ecdfc;
+    border: 1.5px solid #7ecdfc;
+    padding: 0.5rem 1.4rem;
+    border-radius: 60px;
+    font-size: 0.85rem;
+    font-weight: 500;
+    color: #ffffff;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    letter-spacing: 0.3px;
+    font-family: inherit;
+}
 
-  /* Ensures padding and borders are included within the width/height */
-  box-sizing: border-box; 
-  
-  /* Optional: Aesthetics */
-  padding: 10px;
-  text-align: center;
+table td button:hover {
+    background: #516bb5;
+    border-color: #516bb5;
+    color: #ffffff;
+    box-shadow: 0 6px 14px -6px rgba(20, 60, 100, 0.35);
+    transform: translateY(-1px);
+}
+
+table td button:active {
+    transform: translateY(0);
+}
+
+@media (max-width: 900px) {
+    table {
+        width: 100% !important;
+        font-size: 0.85rem;
+    }
+
+    table th,
+    table td {
+        padding: 10px 8px;
+        font-size: 0.78rem;
+    }
+
+    table td button {
+        padding: 0.35rem 0.9rem;
+        font-size: 0.75rem;
+    }
+
+    h2 {
+        font-size: 1.5rem;
+        width: 100%;
+    }
+}
+
+@media (max-width: 600px) {
+    body {
+        padding: 1rem 0.5rem;
+    }
+
+    table th,
+    table td {
+        padding: 8px 6px;
+        font-size: 0.72rem;
+    }
+
+    center {
+        overflow-x: auto;
+        justify-content: flex-start;
+    }
+
+    table {
+        min-width: 640px;
+    }
 }

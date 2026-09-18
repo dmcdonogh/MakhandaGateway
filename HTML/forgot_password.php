@@ -3,28 +3,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../CSS/style.css">
     <title>Document</title>
 </head>
-<body>
-      <body>
-<?php 
-   require '../DB/dbConnect.php';
-//    include '../PHP/navbar.php';
+  <body>
+  <h3>Insert your Email and your mother's maiden name</h3>
+    <form action="../PHP/reset_password.php" method="POST">
 
-if($_SERVER[REQUEST_METHOD]==='POST') {
-    $email=trim($_POST['email']);
-}
+    
+        <label>Email:</label>
+        <input type="email" name="email" value="" required> <br><br>
 
-$stmt= $conn->prepare("SELECT id FROM users WHERE email= ?");
-$stmt->bind_param("s", $email);
-$stmt->execute();
-?>
+        <tr><td>Mother's maiden name:</td>
+          <td><input type="text" name="maiden" value="" reqired></td>
+      </tr>
+        
 
-<form action="forgot_password.php" method="POST">
-    <label>Email:</label>
-    <input type="email" name="email" required>
+        <button type="submit">Send Reset code</button> <br><br>
+        
+    </form>  
 
-    <button type="submit">Send Reset code</button>
-</form>  
-</body>
+  <?php include '../PHP/footer.php';?>
+<button type="button" class="GoBack-button" onclick="history.back()">Go Back</button>
+
+  </body>
 </html>

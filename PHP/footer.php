@@ -75,14 +75,14 @@ background-color: #d3d3d3;
       <div class="column">
         <h3>About Us</h3>
         <p>Makhanda Gateway
-        <br><a href="https://www.google.com/maps/@-33.3093483,26.5240896,17z?entry=ttu&g_ep=EgoyMDI2MDkwMi4wIKXMDSoASAFQAw%3D%3D">
+        <br><a href="https://www.google.com/maps/place/Makana+Local+Municipality+Makhanda/@-33.3091679,26.5264151,19z/data=!4m6!3m5!1s0x1e645dc563e44561:0x41884b31588c42!8m2!3d-33.3093529!4d26.5276356!16s%2Fg%2F11b5yr9xsp?entry=ttu&g_ep=EgoyMDI2MDkxNC4wIKXMDSoASAFQAw%3D%3D">
             <i class="fa fa-map-marker" aria-hidden="true"></i></a> New Street, Makhanda, 6139
 
         <br><a href = "tel:+27645213976">
             <i class="fa fa-phone" aria-hidden="true"></i></a> +64 521 3976
 
         <br><a href="mailto:megansearle04@gmail.com">
-            <i class="fa fa-envelope-o aria-hidden="true"></i></a> info.MakhandaGateway@gmail.com
+            <i class="fa fa-envelope-o" aria-hidden="true"></i></a> info.MakhandaGateway@gmail.com
         </p>
       </div>
 
@@ -94,7 +94,7 @@ background-color: #d3d3d3;
       <div class="column">
         <h3>Location</h3>
         <p> 
-          <a href="https://www.google.com/maps/@-33.3093483,26.5240896,17z?entry=ttu&g_ep=EgoyMDI2MDkwMi4wIKXMDSoASAFQAw%3D%3D">
+          <a href="https://www.google.com/maps/place/Makana+Local+Municipality+Makhanda/@-33.3091679,26.5264151,19z/data=!4m6!3m5!1s0x1e645dc563e44561:0x41884b31588c42!8m2!3d-33.3093529!4d26.5276356!16s%2Fg%2F11b5yr9xsp?entry=ttu&g_ep=EgoyMDI2MDkxNC4wIKXMDSoASAFQAw%3D%3D">
           <img class="mapforfooter-image" id="footer-mapforfooter-image" src="../Images/mapforfooter.png" alt="Map of New Steet"></a>
       </article></p>
       </div>
@@ -105,5 +105,8 @@ background-color: #d3d3d3;
       </div>
     </div>
   </footer>
+    <div class="copyright">
+         <p>&copy;2026 Makhanda Gateway-All rights reserved</p>
+      </div>
 </html>
 

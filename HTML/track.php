@@ -13,8 +13,8 @@
    require '../DB/dbConnect.php';
    include '../PHP/navbar.php';
 ?>
+<button type="button" class="GoBack-button" onclick="history.back()">Go Back</button>
 
-   
 <?php include '../PHP/footer.php';?>
 </body>
 </html>

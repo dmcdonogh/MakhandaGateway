@@ -1,0 +1,276 @@
+form {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 2rem 1rem;
+    min-height: 60vh;
+}
+
+/* Main form table */
+form table {
+    width: 30% !important;
+    min-width: 420px;
+    max-width: 600px;
+    border-collapse: collapse;
+    font-size: 0.95rem;
+    background: #ffffff;
+    border-radius: 1.5rem;
+    overflow: hidden;
+    box-shadow: 0 20px 35px -8px rgba(0, 20, 30, 0.15),
+        0 10px 15px -6px rgba(0, 0, 0, 0.05);
+    border: 1px solid #e2eaf2;
+    margin-bottom: 1.5rem;
+}
+
+form table tr:first-child th {
+    background: #7ecdfc;
+    color: #ffffff !important;
+    padding: 20px 14px;
+    border-bottom: 2px solid #ffffff;
+    text-align: center;
+}
+
+form table tr:first-child th h3 {
+    margin: 0;
+    font-weight: 600;
+    font-size: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color:#ffffff;
+}
+
+form table td:first-child {
+    padding: 16px 18px;
+    color: #516bb5;
+    font-weight: 600;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    background: #fafdff;
+    border-bottom: 1px solid #e2eaf3;
+    vertical-align: middle;
+    width: 40%;
+}
+
+/* Input/select cells */
+form table td:last-child {
+    padding: 14px 16px;
+    background: #ffffff;
+    border-bottom: 1px solid #e2eaf3;
+    vertical-align: middle;
+}
+
+/* Alternating rows for readability */
+form table tr:nth-child(even) td:last-child {
+    background: #fafdff;
+}
+
+form table tr:hover td {
+    background: #eef6ff;
+}
+
+/* Remove border from last data row */
+form table tr:last-child td {
+    border-bottom: none;
+    background: #ffffff;
+}
+
+form table input[type="text"],
+form table input[type="email"] {
+    width: 100%;
+    padding: 10px 14px;
+    border: 1.5px solid #e2eaf2;
+    border-radius: 60px;
+    font-size: 0.9rem;
+    font-family: inherit;
+    color: #516bb5;
+    background: #ffffff;
+    outline: none;
+    transition: all 0.2s ease;
+    box-sizing: border-box;
+}
+
+form table input[type="text"]:focus,
+form table input[type="email"]:focus {
+    border-color: #7ecdfc;
+    box-shadow: 0 0 0 3px rgba(126, 205, 252, 0.25);
+    background: #fafdff;
+}
+
+form table select {
+    width: 100%;
+    padding: 10px 14px;
+    border: 1.5px solid #e2eaf2;
+    border-radius: 60px;
+    font-size: 0.9rem;
+    font-family: inherit;
+    color: #516bb5;
+    background: #ffffff;
+    outline: none;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    box-sizing: border-box;
+    appearance: none;
+    background-image: url("data:image/svg+xml;charset=US-ASCII,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%23516bb5' d='M6 8L1 3h10z'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 16px center;
+    padding-right: 36px;
+}
+
+form table select:focus {
+    border-color: #7ecdfc;
+    box-shadow: 0 0 0 3px rgba(126, 205, 252, 0.25);
+    background-color: #fafdff;
+}
+
+form table input[type="submit"],
+form table input[type="reset"],
+form table button {
+    display: inline-block;
+    min-width: 160px;
+    padding: 0.6rem 1.8rem;
+    border-radius: 60px;
+    font-size: 0.85rem;
+    font-weight: 500;
+    letter-spacing: 0.3px;
+    font-family: inherit;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    box-sizing: border-box;
+    text-align: center;
+    border: 1.5px solid transparent;
+}
+
+
+form table input[type="submit"],
+form table button {
+    background: #7ecdfc;
+    border-color: #7ecdfc;
+    color: #ffffff;
+}
+
+form table input[type="submit"]:hover,
+form table button:hover {
+    background: #516bb5;
+    border-color: #516bb5;
+    color: #ffffff;
+    box-shadow: 0 6px 14px -6px rgba(20, 60, 100, 0.35);
+    transform: translateY(-1px);
+}
+
+form table input[type="submit"]:active,
+form table button:active {
+    transform: translateY(0);
+}
+
+form table input[type="reset"],
+form table .clear-button {
+    background: #516bb5;
+    border-color: #516bb5;
+    color: #ffffff;
+}
+
+form table input[type="reset"]:hover,
+form table .clear-button:hover {
+    background: #c0392b;
+    border-color: #c0392b;
+    color: #ffffff;
+    box-shadow: 0 6px 14px -6px rgba(160, 40, 40, 0.35);
+    transform: translateY(-1px);
+}
+
+form table input[type="reset"]:active,
+form table .clear-button:active {
+    transform: translateY(0);
+}
+
+form table tr:last-child td {
+    text-align: center;
+    padding: 18px 16px;
+}
+
+form table tr:last-child td input[type="submit"],
+form table tr:last-child td input[type="reset"],
+form table tr:last-child td button {
+    margin: 4px;
+}
+
+
+@media (max-width: 900px) {
+    form table {
+        width: 90% !important;
+        min-width: unset;
+        font-size: 0.85rem;
+    }
+
+    form table td:first-child {
+        padding: 12px 14px;
+        font-size: 0.75rem;
+    }
+
+    form table td:last-child {
+        padding: 10px 12px;
+    }
+
+    form table input[type="text"],
+    form table input[type="email"],
+    form table select {
+        font-size: 0.82rem;
+        padding: 8px 12px;
+    }
+
+    form table input[type="submit"],
+    form table input[type="reset"],
+    form table button {
+        min-width: 140px;
+        padding: 0.5rem 1.4rem;
+        font-size: 0.78rem;
+    }
+}
+
+@media (max-width: 600px) {
+    form {
+        padding: 1rem 0.5rem;
+    }
+
+    form table {
+        width: 100% !important;
+        min-width: unset;
+        border-radius: 1rem;
+    }
+
+    form table tr:first-child th h3 {
+        font-size: 0.85rem;
+    }
+
+    form table td:first-child {
+        padding: 10px 10px;
+        font-size: 0.7rem;
+        width: 35%;
+    }
+
+    form table td:last-child {
+        padding: 8px 10px;
+    }
+
+    form table input[type="text"],
+    form table input[type="email"],
+    form table select {
+        font-size: 0.78rem;
+        padding: 7px 10px;
+    }
+
+    form table input[type="submit"],
+    form table input[type="reset"],
+    form table button {
+        min-width: 100%;
+        width: 100%;
+        padding: 0.45rem 1.1rem;
+        font-size: 0.72rem;
+        margin: 3px 0;
+    }
+
+    form table tr:last-child td {
+        padding: 12px 10px;
+    }
+}

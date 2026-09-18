@@ -27,14 +27,18 @@ CREATE TABLE community_member (
 -- Ticket table
 CREATE TABLE ticket (
     ticket_id INT AUTO_INCREMENT PRIMARY KEY,
-    community_member_id INT NOT NULL,
+    user_id INT NOT NULL,
     ward INT NOT NULL,
-    muncipal_service VARCHAR(250) NOT NULL,
-    incident_description VARCHAR(250) NOT NULL,
-    incident_address VARCHAR(250) NOT NULL,
+    municipal_service VARCHAR(250) NOT NULL,
     date_filed DATETIME NOT NULL,
+    street VARCHAR(30),
+    city VARCHAR(30),
+    suburb VARCHAR(30),
+    postal_code VARCHAR(30),
+    description VARCHAR(250) NOT NULL,
+    status VARCHAR(10),
     picture VARCHAR(100),
-    CONSTRAINT fk_community_member_id FOREIGN KEY (community_member_id) REFERENCES community_members()
+    CONSTRAINT fk_ticket_user_id FOREIGN KEY (user_id) REFERENCES users(user_id)
 );
 
 CREATE TABLE ticket_comment(

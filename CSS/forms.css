@@ -1,80 +1,16 @@
-body{
-
-   background-color: #d3d3d3;
-   font-family: 'Times New Roman';
-}
-
-h1{
-   font-family: 'Times New Roman';
-   text-align: center;
-   color: #516bb5;
-  
-}
-.logo-image{
-   border: 1px solid #ddd;
-   border-radius: 4px;
-   padding: 5px;
-   width: 150px;
-}
-
-.about-profile-img{
-   border: 1px solid #ddd;
-   border-radius: 4px;
-   padding: 5px;
-   width: 150px;
-}
-
-h2{
- font-family: 'Times New Roman';
- color: #516bb5;
-}
-
-h3{
- font-family: 'Times New Roman';
- color: #516BB5;
-}
- p{ font-family: 'Times New Roman';
-    text-align: justify;
-    padding:10px;
- }
- p.outset{
-   border: 2px solid #d3d3d3;
+form {
+   width: 100%;
+   max-width: 750px;
+   margin: 30px auto;
+   background: #ffffff;
    border-radius: 16px;
- }
-
- .navbar{
-    display: flex;
-    flex-direction: row;
-    align-items:center;
-    gap: 1rem;
-    list-style: none;
-    margin: 0;
-    padding: 0;
-
+   box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15), 0 8px 20px rgba(0, 0, 0, 0.1);
+   overflow: hidden;
+   animation: fadeInUp 0.6s ease-out;
 }
 
-.navbar-profilelinks {
-   margin-left: auto;
-   /* flex-direction: row-reverse;
-   align-items:center;
-   gap: 1rem;
-   list-style: none;
-   margin: 0;
-   padding: 0; */ 
-   /* spacing between links */
-}
-
-a:link, a:visited{
-   color: black;
-   text-decoration: none;
-}
-a:hover, a:active{
-   color:#516BB5;
-}
-
-
-
-.report-button{ /*most buttons*/
+.report-button {
+   /*most buttons*/
    display: inline-block;
    text-align: center;
    font-family: 'Times New Roman';
@@ -85,38 +21,384 @@ a:hover, a:active{
    text-decoration: none;
    font-size: 16px;
    cursor: pointer;
-  /* Set a baseline width and height */
-   min-width: 200px; 
+   /* Set a baseline width and height */
+   min-width: 200px;
    height: 45px;
-  /* Ensures padding and borders are included within the width/height */
+   /* Ensures padding and borders are included within the width/height */
    /* box-sizing: border-box;  */
-  /* Optional: Aesthetics */
-  padding: 10px;
-  text-align: center;
- }
-
- #report-button-clear{
-   background-color: #DAE8FC;
- }
-   
-.buttonClick{ 
-    font-family: 'Times New Roman';
-       background-color: #DAE8FC;
-  border:black;
-  padding: 14px 40px;
-   border-radius: 4px;
-  font-size: 16px;
- cursor: pointer;
-
-  /* Set a baseline width and height */
-  min-width: 200px; 
-  height: 45px;
-
-  /* Ensures padding and borders are included within the width/height */
-  box-sizing: border-box; 
-  
-  /* Optional: Aesthetics */
-  padding: 10px;
-  text-align: center;
+   /* Optional: Aesthetics */
+   padding: 10px;
+   text-align: center;
 }
 
+#report-button-clear {
+   background-color: #DAE8FC;
+}
+
+.buttonClick {
+   font-family: 'Times New Roman';
+   background-color: #DAE8FC;
+   border: black;
+   padding: 14px 40px;
+   border-radius: 4px;
+   font-size: 16px;
+   cursor: pointer;
+
+   /* Set a baseline width and height */
+   min-width: 200px;
+   height: 45px;
+
+   /* Ensures padding and borders are included within the width/height */
+   box-sizing: border-box;
+
+   /* Optional: Aesthetics */
+   padding: 10px;
+   text-align: center;
+}
+
+/* ===== UPDATE USER FORM CARD ===== */
+.update-user-form {
+   width: 100%;
+   max-width: 750px;
+   margin: 30px auto;
+   background: #ffffff;
+   border-radius: 16px;
+   box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15), 0 8px 20px rgba(0, 0, 0, 0.1);
+   overflow: hidden;
+   animation: fadeInUp 0.6s ease-out;
+}
+
+@keyframes fadeInUp {
+   from {
+      opacity: 0;
+      transform: translateY(30px);
+   }
+
+   to {
+      opacity: 1;
+      transform: translateY(0);
+   }
+}
+
+/* ===== TABLE STRUCTURE ===== */
+.update-user-form table {
+   width: 100%;
+   border-collapse: collapse;
+   display: table;
+}
+
+/* ===== TABLE HEADER ===== */
+.update-user-form table th {
+   background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+   color: #ffffff;
+   padding: 22px 20px;
+   text-align: center;
+   border-radius: 16px 16px 0 0;
+}
+
+.update-user-form table th h3 {
+   font-family: 'Times New Roman';
+   color: #ffffff;
+   font-size: 1.4rem;
+   letter-spacing: 1px;
+   text-transform: uppercase;
+   border-bottom: 3px solid #7ecdfc;
+   display: inline-block;
+   padding-bottom: 10px;
+}
+
+/* ===== TABLE DATA CELLS ===== */
+.update-user-form table td {
+   padding: 14px 20px;
+   font-size: 0.95rem;
+   color: #516BB5;
+   font-weight: 600;
+   letter-spacing: 0.5px;
+   border-bottom: 1px solid #f0f0f0;
+   vertical-align: middle;
+}
+
+.update-user-form table td h4 {
+   font-size: 0.95rem;
+   font-weight: 600;
+   color: #516bb5;
+   letter-spacing: 0.5px;
+   text-transform: uppercase;
+   margin: 0;
+   white-space: nowrap;
+}
+
+/* ===== INPUT & SELECT STYLING ===== */
+.update-user-form table input[type="text"],
+.update-user-form table input[type="email"],
+.update-user-form table input[type="password"],
+.update-user-form table select,
+.update-user-form table textarea {
+   width: 100%;
+   padding: 10px 14px;
+   font-family: 'Times New Roman';
+   border: 2px solid #e0e0e0;
+   border-radius: 6px;
+   font-size: 0.95rem;
+   color: #333;
+   background-color: #fafafa;
+   outline: none;
+   transition: border-color 0.3s ease,
+      box-shadow 0.3s ease,
+      background-color 0.3s ease,
+      transform 0.2s ease;
+   appearance: none;
+   -webkit-appearance: none;
+   cursor: text;
+}
+
+/* Read-only inputs */
+.update-user-form table input[readonly] {
+   background-color: #f0f0f0;
+   color: #777;
+   cursor: not-allowed;
+   border-color: #e0e0e0;
+}
+
+.update-user-form table input[readonly]:hover {
+   border-color: #e0e0e0;
+   background-color: #f0f0f0;
+   box-shadow: none;
+   transform: none;
+}
+
+.update-user-form table input[readonly]:focus {
+   border-color: #e0e0e0;
+   background-color: #f0f0f0;
+   box-shadow: none;
+}
+
+/* --- HOVER STATE --- */
+.update-user-form table input[type="text"]:not([readonly]):hover,
+.update-user-form table input[type="email"]:not([readonly]):hover,
+.update-user-form table input[type="password"]:hover,
+.update-user-form table select:hover {
+   border-color: #7ecdfc;
+   background-color: #f0f8ff;
+   box-shadow: 0 0 0 3px rgba(126, 205, 252, 0.20);
+   transform: translateY(-1px);
+}
+
+/* --- FOCUS STATE --- */
+.update-user-form table input[type="text"]:not([readonly]):focus,
+.update-user-form table input[type="email"]:not([readonly]):focus,
+.update-user-form table input[type="password"]:focus,
+.update-user-form table select:focus {
+   border-color: #516BB5;
+   background-color: #ffffff;
+   box-shadow: 0 0 0 4px rgba(81, 107, 181, 0.20);
+}
+
+/* Placeholder color */
+.update-user-form table input::placeholder {
+   color: #a0a0a0;
+   font-style: italic;
+}
+
+/* ===== DROPDOWN CUSTOM ARROW ===== */
+.update-user-form table select {
+   cursor: pointer;
+   padding-right: 40px;
+   background-repeat: no-repeat;
+   background-position: right 14px center;
+   background-size: 12px;
+}
+
+.update-user-form table select option {
+   background: #ffffff;
+   color: #333;
+   padding: 8px;
+}
+
+/* ===== SUBMIT / RESET BUTTONS ===== */
+.update-user-form table input[type="submit"],
+.update-user-form table input[type="reset"] {
+   width: 100%;
+   padding: 12px 28px;
+   border: none;
+   font-family: 'Times New Roman';
+   border-radius: 6px;
+   font-size: 0.95rem;
+   font-weight: 700;
+   letter-spacing: 0.5px;
+   cursor: pointer;
+   transition: background-color 0.3s ease,
+      transform 0.2s ease,
+      box-shadow 0.3s ease;
+   text-transform: uppercase;
+   background-color: #7ecdfc;
+   color: #ffffff;
+   box-shadow: 0 4px 12px rgba(102, 126, 234, 0.4);
+   margin-top: 6px;
+}
+
+.update-user-form table input[type="submit"]:hover,
+.update-user-form table input[type="reset"]:hover {
+   background-color: #516bb5;
+   transform: translateY(-2px);
+   box-shadow: 0 6px 18px rgba(102, 126, 234, 0.5);
+}
+
+.update-user-form table input[type="reset"]:hover {
+   background: #e74c3c;
+   box-shadow: 0 8px 25px rgba(231, 76, 60, 0.5);
+   transform: translateY(-3px);
+}
+
+.update-user-form table input[type="submit"]:active,
+.update-user-form table input[type="reset"]:active {
+   transform: translateY(0);
+   box-shadow: 0 2px 8px rgba(102, 126, 234, 0.4);
+}
+
+/* Last row spacing for buttons */
+.update-user-form table tr:last-child td {
+   padding-top: 20px;
+   text-align: center;
+}
+
+.GoBack-button {
+   display: inline-flex;
+   align-items: center;
+   justify-content: center;
+   gap: 8px;
+   padding: 12px 28px;
+   margin-top: 20px;
+   font-family: 'Times New Roman';
+   font-size: 0.95rem;
+   font-weight: 700;
+   letter-spacing: 0.5px;
+   text-transform: uppercase;
+   text-decoration: none;
+   color: #516BB5;
+   background-color: transparent;
+   border: 2px solid #516BB5;
+   border-radius: 6px;
+   cursor: pointer;
+   transition: background-color 0.3s ease,
+      color 0.3s ease,
+      transform 0.2s ease,
+      box-shadow 0.3s ease,
+      border-color 0.3s ease;
+   box-shadow: 0 2px 6px rgba(81, 107, 181, 0.15);
+}
+
+.GoBack-button:hover {
+   background-color: #516BB5;
+   color: #ffffff;
+   border-color: #516BB5;
+   transform: translateY(-2px);
+   box-shadow: 0 8px 20px rgba(81, 107, 181, 0.45);
+}
+
+.GoBack-button:hover i {
+   transform: translateX(-4px);
+}
+
+.GoBack-button:active {
+   transform: translateY(0);
+   box-shadow: 0 2px 6px rgba(81, 107, 181, 0.3);
+}
+
+.GoBack-button:focus-visible {
+   outline: 3px solid #7ecdfc;
+   outline-offset: 3px;
+}
+
+.GoBack-button i {
+   transition: transform 0.3s ease;
+   font-size: 0.9rem;
+}
+
+/* To center the Go Back button */
+.GoBack-wrapper {
+   display: flex;
+   justify-content: center;
+   width: 100%;
+   padding: 0 30px 30px 30px;
+}
+
+@media screen and (max-width: 600px) {
+   body>h1 {
+      font-size: 1.3rem;
+      margin: 20px 0 10px;
+      padding: 10px;
+   }
+
+   .update-user-form {
+      margin: 15px auto;
+      border-radius: 12px;
+      padding: 20px 15px;
+   }
+
+   .GoBack-button {
+      width: 100%;
+      padding: 12px 20px;
+      font-size: 0.85rem;
+      background-color: #d3d3d3;
+   }
+
+   /*article.GoButton-wrapper{
+    background: none;
+}*/
+   .update-user-form table td {
+      display: block;
+      width: 100%;
+      padding: 6px 0;
+   }
+
+   .update-user-form table td:first-child {
+      padding-top: 14px;
+      font-size: 0.85rem;
+   }
+
+   .update-user-form table th h3 {
+      font-size: 1.1rem;
+   }
+
+   .update-user-form table tr {
+      display: flex;
+      flex-direction: column;
+      margin-bottom: 8px;
+   }
+
+   .update-user-form table input[type="submit"],
+   .update-user-form table input[type="reset"] {
+      width: 100%;
+      margin-bottom: 10px;
+   }
+}
+
+/*Form */
+.login-form {
+   display: flex;
+   flex-direction: column;
+   gap: 18px;
+}
+
+.form-group {
+   display: flex;
+   flex-direction: column;
+   gap: 6px;
+   height: auto;
+}
+
+.form-group label {
+   font-size: 16px;
+   font-weight: 600;
+   color: #516bb5;
+}
+
+/* -------- Row (remember / forgot) -------- */
+.form-row {
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   font-size: 13.5px;
+   margin-top: -4px;
+}

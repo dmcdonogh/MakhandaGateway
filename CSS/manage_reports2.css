@@ -1,0 +1,186 @@
+center {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 1rem 0;
+}
+table {
+    width: 90% !important;
+    max-width: 1400px;
+    border-collapse: collapse;
+    font-size: 0.95rem;
+    background: #ffffff;
+    border-radius: 1.5rem;
+    overflow: hidden;
+    box-shadow: 0 20px 35px -8px rgba(0, 20, 30, 0.15),
+        0 10px 15px -6px rgba(0, 0, 0, 0.05);
+    border: 1px solid #e2eaf2;
+    margin-bottom: 1.5rem;
+}
+
+
+table tr:first-child th,
+table th {
+    background: #7ecdfc;
+    color: #ffffff !important;
+    font-weight: 600;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    padding: 16px 14px;
+    text-align: left;
+    white-space: nowrap;
+    border-bottom: 2px solid #cdddec;
+}
+
+/* Table data cells */
+table td {
+    padding: 14px 16px;
+    color: #516bb5;
+    border-bottom: 1px solid #e2eaf3;
+    background: #ffffff;
+    transition: background 0.15s ease;
+    vertical-align: middle;
+}
+
+/* Alternating row colors */
+table tr:nth-child(even) td {
+    background: #fafdff;
+}
+
+/* Row hover effect */
+table tr:hover td {
+    background: #eef6ff;
+}
+
+/* Remove border from last row */
+table tr:last-child td {
+    border-bottom: none;
+}
+
+/* Link inside table cell */
+table td a {
+    text-decoration: none;
+}
+
+/* Update button styling */
+table td button {
+    background: #7ecdfc;
+    border: 1.5px solid #7ecdfc;
+    padding: 0.5rem 1.4rem;
+    border-radius: 60px;
+    font-size: 0.85rem;
+    font-weight: 500;
+    color: #ffffff;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    letter-spacing: 0.3px;
+    font-family: inherit;
+}
+
+table td button:hover {
+    background: #516bb5;
+    border-color: #516bb5;
+    color: #ffffff;
+    box-shadow: 0 6px 14px -6px rgba(20, 60, 100, 0.35);
+    transform: translateY(-1px);
+}
+
+table td button:active {
+    transform: translateY(0);
+}
+
+/* Go Back button styling */
+.GoBack-button {
+    display: inline-block;
+    margin: 0 auto 1.5rem auto;
+    background: #7ecdfc;
+    border: 1.5px solid #7ecdfc;
+    padding: 0.65rem 2rem;
+    border-radius: 60px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: #ffffff;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    letter-spacing: 0.3px;
+    font-family: inherit;
+}
+
+.GoBack-button:hover {
+    background: #516bb5;
+    border-color: #516bb5;
+    color: #ffffff;
+    box-shadow: 0 6px 14px -6px rgba(20, 60, 100, 0.35);
+    transform: translateY(-1px);
+}
+
+.GoBack-button:active {
+    transform: translateY(0);
+}
+
+/* No records message */
+h2 {
+    text-align: center;
+    color: #516bb5;
+    font-weight: 500;
+    padding: 2rem;
+}
+
+/* Responsive design */
+@media (max-width: 900px) {
+    table {
+        width: 100% !important;
+        font-size: 0.85rem;
+    }
+
+    table th,
+    table td {
+        padding: 10px 8px;
+        font-size: 0.78rem;
+    }
+
+    table td button {
+        padding: 0.35rem 0.9rem;
+        font-size: 0.75rem;
+    }
+
+    h2 {
+        font-size: 1.5rem;
+        width: 100%;
+    }
+
+    .GoBack-button {
+        padding: 0.5rem 1.5rem;
+        font-size: 0.85rem;
+    }
+}
+
+@media (max-width: 600px) {
+    body {
+        padding: 1rem 0.5rem;
+    }
+
+    table th,
+    table td {
+        padding: 8px 6px;
+        font-size: 0.72rem;
+    }
+
+    center {
+        overflow-x: auto;
+        justify-content: flex-start;
+    }
+
+    table {
+        min-width: 640px;
+    }
+
+    .GoBack-button {
+        display: block;
+        width: fit-content;
+        margin: 0 auto 1rem auto;
+        padding: 0.5rem 1.2rem;
+        font-size: 0.8rem;
+    }
+}

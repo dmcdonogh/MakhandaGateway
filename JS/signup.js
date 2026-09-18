@@ -3,7 +3,6 @@ const wardOption = document.getElementById("signup-ward-option");
 
 role.addEventListener("change", function() {
     if (role.value === "Community Member"
-        || role.value === "Municipal Officer"
         || role.value === "Ward Councillor") {
         wardOption.style.display = "table-row";
         console.log("Role: ", role.value);
